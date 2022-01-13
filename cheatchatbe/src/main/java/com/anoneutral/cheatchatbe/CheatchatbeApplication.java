@@ -1,0 +1,13 @@
+package com.anoneutral.cheatchatbe;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CheatchatbeApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CheatchatbeApplication.class, args);
+		
+	}
+}
