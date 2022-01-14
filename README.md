@@ -8,7 +8,9 @@ Flutter test application. Main functionality is to be able to chat someone or in
 	- import the project to your favorite ide
 	- setup device
 		> Run `flutter doctor` to see the devices are connected/discovered
+		
 		> If you want to run on actual device, make sure your device are on debug mode, connected to machine(laptop), and discovered by flutter doctor
+		
 		> If you want to run on browser, no need to setup. Just make sure you have your browser installed and run the project. Also run flutter doctor to make sure browser is discovered.
 
 
