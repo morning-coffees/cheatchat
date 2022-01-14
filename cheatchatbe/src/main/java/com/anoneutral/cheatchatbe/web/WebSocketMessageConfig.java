@@ -4,6 +4,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
+import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
+import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
 
 @Configuration
@@ -12,7 +14,9 @@ public class WebSocketMessageConfig implements WebSocketMessageBrokerConfigurer 
 	
 	@Override
 	public void registerStompEndpoints(final StompEndpointRegistry registry) {
-		registry.addEndpoint("/chat-example").withSockJS();
+		registry.addEndpoint("/cheatchat")
+			.setAllowedOriginPatterns("*")
+			.withSockJS();
 	}
 
 	@Override
@@ -20,4 +24,6 @@ public class WebSocketMessageConfig implements WebSocketMessageBrokerConfigurer 
 		registry.setApplicationDestinationPrefixes("/app");
 		registry.enableSimpleBroker("/topic");
 	}
+	
+	
 }
